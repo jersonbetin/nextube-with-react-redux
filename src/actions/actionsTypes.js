@@ -1,0 +1,2 @@
+//movies
+export const SEARCH_MOVIES_SUCCESS = 'SEARCH_MOVIES_SUCCESS'
