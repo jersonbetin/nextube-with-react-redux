@@ -1,14 +1,15 @@
 import React from 'react'
 import {render} from 'react-dom'
-import App from './components/index'
 import {Provider} from 'react-redux'
+import { Router, browserHistory} from 'react-router'
+import routes from './router'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import store from './store/index'
 
-
 render(
   <Provider store={store}>
-    <App />
+    <Router history={browserHistory} routes={routes}/>
   </Provider>,
   document.getElementById('root')
 )

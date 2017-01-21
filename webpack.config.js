@@ -13,7 +13,7 @@ module.exports = {
         './index.js'
     ],
     output:{
-        path:dirSource,
+        path:__dirname,
         filename:'[name].js',
         publicPath:'/'
     },
@@ -33,7 +33,7 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
-        new HtmlWebpackPlugin({template: path.join(__dirname, 'build/index.html')})
+        new HtmlWebpackPlugin({template: path.join(__dirname, 'index.html')})
     ],
     devServer: {
         hot:true,

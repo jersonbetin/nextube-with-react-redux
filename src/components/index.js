@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
+import Header from './commons/Header'
 
 class App extends Component {
   constructor(props, context){
@@ -7,9 +8,16 @@ class App extends Component {
 
   render(){
     return(
-      <h1>Hola mundo</h1>
+      <div className="container-fluid">
+        <Header/>
+        {this.props.children}
+      </div>
     )
   }
+}
+
+App.propTypes = {
+  children: PropTypes.object.isRequired
 }
 
 export default App
