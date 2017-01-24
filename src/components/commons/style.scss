@@ -1,0 +1,15 @@
+.nav-items {
+  li {
+    >.active {
+      color: #fff;
+      background-color: lightgray;
+      cursor: default;
+      border: 1px solid #ddd;
+      border-bottom-color: transparent;
+      &:hover{
+        color: #777 !important;
+        background-color: lightgray!important;
+      }
+    }
+  }
+}

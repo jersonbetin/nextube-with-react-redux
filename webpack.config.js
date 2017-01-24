@@ -13,7 +13,7 @@ module.exports = {
         './index.js'
     ],
     output:{
-        path:__dirname,
+        path:dirSource,
         filename:'[name].js',
         publicPath:'/'
     },
@@ -27,6 +27,7 @@ module.exports = {
         loaders:[
             { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack','babel'] },
             { test: /\.css$/, loaders: ['style-loader','css-loader']},
+            { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
             { test: /\.(ttf|otf|eot|svg|woff(2)?)$/, loader: 'url' }
         ]
     },

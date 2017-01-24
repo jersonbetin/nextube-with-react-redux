@@ -32,7 +32,7 @@ const movies = [
     link: 'https://www.youtube.com/embed/5cJMlGJcT2E'
   },
   {
-    id: 1,
+    id: 6,
     name: 'Calvario',
     actor: 'Brendan Gleeson',
     link: 'https://www.youtube.com/embed/1YOhVyNteZU'
@@ -52,7 +52,7 @@ function generateId() {
 
 class MovieApi {
   static getAllMovies(){
-    return new Promise((resolver, reject) => {
+    return new Promise((resolver) => {
       setTimeout(() => {
         resolver(Object.assign([], movies))
       })
@@ -60,10 +60,10 @@ class MovieApi {
   }
 
   static saveMovie(movie){
-    movie = Object.assign({}, movie);
+    movie = Object.assign({}, movie)
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const minMovieNameLength = 3;
+        const minMovieNameLength = 3
         if(movie.name.length < minMovieNameLength){
           reject({
             error:'error',
@@ -83,7 +83,7 @@ class MovieApi {
   }
 
   static deleteMovie(movieId){
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         const indexMovieToDelete = movies.findIndex( movie => {
           movie.id = movieId
@@ -94,3 +94,5 @@ class MovieApi {
     })
   }
 }
+
+export default MovieApi

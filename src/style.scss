@@ -1,0 +1,85 @@
+$extreme-large:25px;
+$large:20px;
+$medium:15px;
+$small:10px;
+$extreme-small:5px;
+
+.m-l-xl{
+  margin-left: $extreme-large;
+}
+.m-l-l{
+  margin-left: $large;
+}
+.m-l-m{
+  margin-left: $medium;
+}
+.m-l-s{
+  margin-left: $small;
+}
+.m-l-xs{
+  margin-left: $extreme-small;
+}
+
+.m-xl{
+  margin: $extreme-large;
+}
+.m-l{
+  margin: $large;
+}
+.m-m{
+  margin: $medium;
+}
+.m-s{
+  margin: $small;
+}
+.m-xs{
+  margin: $extreme-small;
+}
+
+.m-r-xl{
+  margin-right: $extreme-large;
+}
+.m-r-l{
+  margin-right: $large;
+}
+.m-r-m{
+  margin-right: $medium;
+}
+.m-r-s{
+  margin-right: $small;
+}
+.m-r-xs{
+  margin-right: $extreme-small;
+}
+
+.m-t-xl{
+  margin-top: $extreme-large;
+}
+.m-t-l{
+  margin-top: $large;
+}
+.m-t-m{
+   margin-top: $medium;
+ }
+.m-t-s{
+  margin-top: $small;
+}
+.m-t-xs{
+  margin-top: $extreme-small;
+}
+
+.m-b-xl{
+  margin-bottom: $extreme-large;
+}
+.m-b-l{
+  margin-bottom: $large;
+}
+.m-b-m{
+  margin-bottom: $medium;
+}
+.m-b-s{
+  margin-bottom: $small;
+}
+.m-b-xs{
+  margin-bottom: $extreme-small;
+}
