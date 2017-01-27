@@ -7,7 +7,7 @@ const InputSearch = ({type, placeholder, onpress}) => {
         type={type}
         className="form-control input-lg"
         placeholder={placeholder}
-        onKeyPress={onpress}/>
+        onChange={onpress}/>
       <span className="input-group-btn">
         <button className="btn btn-info btn-lg" type="button">
           <i className="glyphicon glyphicon-search"></i>

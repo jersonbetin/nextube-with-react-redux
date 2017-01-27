@@ -8,6 +8,30 @@ export function searchMoviesSuccess(movies) {
   }
 }
 
+export function deleteMovieSuccess(movieId){
+  return {
+    type:types.DELETE_MOVIES_SUCCESS,
+    payload:movieId
+  }
+}
+
+export function saveMovieSuccess(movie) {
+  return {
+    type:types.SAVE_MOVIES_SUCCESS,
+    payload:movie
+  }
+}
+
+export function saveMovie(movie){
+  return (dispatch) => {
+    return movieApi.saveMovie(movie).then(savedMovie => {
+      dispatch(saveMovieSuccess(savedMovie))
+    }).catch(error => {
+      throw (error)
+    })
+  }
+}
+
 export function searchMovies() {
   return (dispatch) => {
     return movieApi.getAllMovies().then(movies => {
@@ -15,5 +39,17 @@ export function searchMovies() {
     }).catch( error => {
       console.log(error)
     })
+  }
+}
+
+export function deleteMovie(movieId){
+  return (dispatch) => {
+    return movieApi.deleteMovie(movieId)
+      .then(()=>{
+        dispatch(deleteMovieSuccess(movieId))
+      })
+      .catch((error)=>{
+        throw (error)
+      })
   }
 }

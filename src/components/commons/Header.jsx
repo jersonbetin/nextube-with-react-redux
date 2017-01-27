@@ -18,8 +18,8 @@ const Header = () => {
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav nav-items">
-              <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-              <li><Link to="/movies" activeClassName="active">Movies</Link></li>
+              <li><IndexLink to="/" activeClassName="active">Inicio</IndexLink></li>
+              <li><Link to="/movies" activeClassName="active">Peliculas</Link></li>
             </ul>
           </div>
         </div>
