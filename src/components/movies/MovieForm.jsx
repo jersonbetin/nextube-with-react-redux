@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 
 import TextInput from '../commons/TextInput'
 
-const FormMovie = ({movie, onChange, onSave, onClear}) => {
+const FormMovie = ({movie, onChange, onSave, onClear, saving}) => {
   return (
    <form role="form" className="m-t-s">
      <TextInput
@@ -27,7 +27,11 @@ const FormMovie = ({movie, onChange, onSave, onClear}) => {
        width="col-lg-12"
        placeholder="Ingrese link de la pelicula"/>
      <div className="col-lg-12 m-t-m">
-       <input type="submit" onClick={onSave} value="Guardar" className="btn btn-primary btn-lg col-lg-5 col-lg-offset-1 m-r-m"/>
+       <input
+         type="submit"
+         onClick={onSave}
+         value={ saving ? 'Guardando...' :'Guardar'}
+         className={'btn btn-primary btn-lg col-lg-5' + ' col-lg-offset-1 m-r-m'}/>
        <input type="reset" onClick={onClear} value="Limpiar" className="btn btn-default btn-lg col-lg-5"/>
      </div>
    </form>
@@ -38,7 +42,8 @@ FormMovie.propTypes = {
   movie: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   onSave: PropTypes.func.isRequired,
-  onClear: PropTypes.func
+  onClear: PropTypes.func,
+  saving: PropTypes.bool
 }
 
 

@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux'
 import SweetAlert from 'sweetalert-react'
 import {browserHistory} from 'react-router'
 
-import * as moviesActions from '../../actions/moviesAcitions'
+import * as moviesActions from '../../actions/moviesActions'
 import MoviesList from './MoviesList'
 import InputSearch from '../commons/InputSearch'
 
@@ -76,7 +76,7 @@ class Movies extends Component {
         <SweetAlert
           show={this.state.show}
           title="Confirmar"
-          text="SweetAlert in react"
+          text="¿Seguro que quieres eliminar la pelicula?"
           showCancelButton
           onConfirm={this.onHandleDeleteItem}
           onCancel={()=> this.setState({show:false, itemDelete:null})}

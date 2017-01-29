@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react'
+import {Link} from 'react-router'
 
 const style = {
   float:'right'
@@ -19,7 +20,8 @@ const MovieRow = ({movie, deleteItem}) => {
             allowFullScreen/>}
         </div>
         <div className="panel-footer">
-          <a className="btn btn-info m-r-xs">Editar</a>
+          <Link className="btn btn-primary m-r-xs" to={'movie/'+movie.id+ '/show'}>Ver</Link>
+          <Link className="btn btn-info m-r-xs" to={'movie/'+movie.id}>Editar</Link>
           <a className="btn btn-danger" id={movie.id} onClick={deleteItem}>Elimninar</a>
           {movie.viewed && <a className="btn btn-success disabled" style={style}>Visto</a>}
         </div>

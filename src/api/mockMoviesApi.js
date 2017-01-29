@@ -81,17 +81,16 @@ class MovieApi {
             message:`Actor must be at least ${minMovieNameLength} characters.`
           })
         }
-
+        debugger
         if(movie.id){
-          const existingMovieIndex = movies.findIndex(a => {
-            a.id == movie.id
-          })
+          const existingMovieIndex = movies.findIndex(a => a.id == movie.id)
           movies.splice(existingMovieIndex, 1 , movie)
 
         }else {
           movie.id = generateId()
           movies.push(movie)
         }
+
 
         resolve(movie)
       }, delay)

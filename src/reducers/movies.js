@@ -11,8 +11,15 @@ export default function moviesReducer(state = initialState.movies, action) {
       ...state.filter(movie => movie.id !== action.payload)
     ]
   case types.SAVE_MOVIES_SUCCESS:
+    debugger
     return [
       ...state,
+      Object.assign({}, action.payload)
+    ]
+  case types.UPDATE_MOVIES_SUCCESS:
+    debugger
+    return [
+      ...state.filter(movie => movie.id != action.payload.id),
       Object.assign({}, action.payload)
     ]
   default:
