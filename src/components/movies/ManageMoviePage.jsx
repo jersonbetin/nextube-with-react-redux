@@ -39,7 +39,7 @@ class ManageMoviePage extends Component {
     this.props.actions.saveMovie(this.state.movie)
       .then(()=> {
         this.setState({saving:false})
-        browserHistory.push('movies')
+        browserHistory.push('/movies')
         toastr.success('Guardado con exito')
       }).catch(error => {
         console.log(error)
